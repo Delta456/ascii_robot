@@ -2,7 +2,7 @@ module ascii_robot
 
 import rand
 
-pub fn random_str() string {
+pub fn random_robot() string {
 	out := generate(random_id()) or { '' }
 	return out
 }
@@ -16,7 +16,7 @@ pub fn random_id() string {
 }
 
 pub fn must_generate(id string) string {
-	out := generate(id) or {''}
+	out := generate(id) or { panic(err) }
  	return out
 }
 
