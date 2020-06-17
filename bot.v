@@ -1,11 +1,6 @@
 module ascii_robot
 
 import rand
-//import time
-
-fn init() {
-	rand.seed([u32(42), 0])
-}
 
 pub fn random_str() string {
 	out := generate(random_id()) or { '' }
