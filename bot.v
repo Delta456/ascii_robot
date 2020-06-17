@@ -7,25 +7,25 @@ fn init() {
 	rand.seed([u32(42), 0])
 }
 
-pub fn random() string {
-	out := generate(random_id()) or { panic(err) }
+pub fn random_str() string {
+	out := generate(random_id()) or { '' }
 	return out
 }
 
 pub fn random_id() string {
 	mut out := ""
 	for i := 0; i < 5; i++ {
-		out += rand.intn(16).str() // 16 because hex
+		out += rand.intn(16).hex() // 16 because hex
 	}
 	return out
 }
 
 pub fn must_generate(id string) string {
-	out := generate(id) or { panic(err)}
+	out := generate(id) or {''}
  	return out
 }
 
-fn generate(id string) ?string {
+pub fn generate(id string) ?string {
 	if id.len != 5 {
 		return error('id length must be equal to 5')
 	}
@@ -72,7 +72,7 @@ fn hex_only(r byte) byte {
 
 // split splits template into top, center and bottom parts
 fn split(template string) (string, string, string) {
-	s := template.split("\n")
+	s := template.split(r"\n")
 	top := s[0..3].join("\n") + "\n"
 	center := s[3..5].join("\n") + "\n"
 	bottom := s[5..7].join("\n")
