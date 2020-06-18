@@ -9,7 +9,7 @@ ASCII Robot Generator in V
 - Via `v install`
     - `v install ascii_robot`
 - Via `vpkg`
-    - `vpkg install ascii_range`
+    - `vpkg install ascii_robot`
 
 ## Usage 
 
@@ -39,7 +39,7 @@ fn main() {
 ```
 ## Bot Types
 
-Total ASCII bot types possible: 
+Total ASCII Robot Types possible: 
 
 ```
    _ _,_,_ _   
@@ -1215,7 +1215,7 @@ templates = {
 
 ## Acknowledgements
 
-I thank [`walsh9/asciibots`](https://github.com/walsh9/asciibots) who originally wrote this in JS and [`mattes/go-asciibot`](https://github.com/mattes/go-asciibot) which helped me a lot.
+I thank [`walsh9/asciibots`](https://github.com/walsh9/asciibots) who originally wrote this in JS and [`mattes/go-asciibot`](https://github.com/mattes/go-asciibot) in Go which helped me a lot inorder to port this.
 
 ## License
 
