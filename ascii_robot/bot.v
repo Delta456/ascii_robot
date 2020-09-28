@@ -24,7 +24,7 @@ pub fn generate(id string) ?string {
 	if id.len != 5 {
 		return error('id length must be equal to 5')
 	}
-	str := string(id.bytes().map(hex_only(it)))
+	str := id.map(hex_only)
 
 	if str.len != 5 {
 		return error('id must be 5 hexadecimal characters [0-9a-f]')
